@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+html {
+  --bg-color: hsl(0deg, 24%, 94%);
+  --stopwatch-bg: hsl(185deg, 66%, 59%);
+  --btn-primary: hsl(0deg, 100%, 50%);
+  --btn-secondary: hsl(47deg, 92%, 70%);
+}
+
+.dark-mode {
+  --bg-color: hsl(0deg, 24%, 14%);
+  --stopwatch-bg: hsl(185deg, 66%, 29%);
+  --btn-primary: hsl(0deg, 50%, 25%);
+  --btn-secondary: hsl(47deg, 52%, 50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-color);
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+}
+
+.btn-darkmode {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 80px;
+  background: var(--stopwatch-bg);
+  border: 1px solid hsla(0, 0%, 0%, 0.25);
+  border-bottom: none;
+}
+.btn-darkmode button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  transform: translateX(-50%);
+  border: none;
+  background: var(--stopwatch-bg);
+  cursor: pointer;
+  border: 1px solid hsla(0, 0%, 0%, 0.25);
+}
+.btn-darkmode button img {
+  width: 24px;
+}
+
+.stopwatch {
+  width: min(500px, 90%);
+  height: 200px;
+  background: var(--stopwatch-bg);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.stopwatch h1 {
+  font: 400 clamp(50px, 5vw, 75px)/1.5em "Poppins", sans-serif;
+  position: relative;
+}
+.stopwatch .btn-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.stopwatch .btn-container .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--btn-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stopwatch .btn-container .btn img {
+  width: 16px;
+}
+.stopwatch .btn-container .btn:nth-child(2) {
+  background: var(--btn-primary);
+  transform: scale(1.15);
+}
+.stopwatch .btn-container .btn:nth-child(2) img {
+  transform: translate(2px, 1px);
+}
+
+@media screen and (min-width: 768px) {
+  .stopwatch {
+    height: 300px;
+  }
+  .stopwatch .btn-container .btn {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .stopwatch {
+    width: min(600px, 80%);
+  }
+  .stopwatch .btn-container .btn {
+    width: 60px;
+    height: 60px;
+  }
+  .stopwatch .btn-container .btn img {
+    width: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
