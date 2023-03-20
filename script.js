@@ -46,3 +46,9 @@ let reset_btn = document.getElementById("reset");
 start_btn.addEventListener("click", watchStart);
 stop_btn.addEventListener("click", watchStop);
 reset_btn.addEventListener("click", watchReset);
+
+var darkmode_btn = document.getElementById("btn-darkmode");
+
+darkmode_btn.addEventListener('click', function() {
+    document.documentElement.classList.toggle('dark-mode');
+})
